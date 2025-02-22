@@ -1,5 +1,14 @@
 <?php
 
+//header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Credentials: true");
+//header("Access-Control-Allow-Methods: GET, POST, OPTIONS, POST, PUT");
+//header("Access-control-Allow-Headers: X-Requested-With, Content-Type");
+//
+//if ('OPTIONS' === $_SERVER['REQUEST_METHOD']) {
+//    die('error');
+//}
+
 /*
  *---------------------------------------------------------------
  * CHECK PHP VERSION
