@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button id="btn_send_request">Send request</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+
+    const axiosInstance = axios.create({
+      baseURL: 'http://localhost:8000',
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'Content-Type': 'application/json'
+      }
+    })
+
+    const btn_send_request = document.querySelector('#btn_send_request');
+
+    btn_send_request.addEventListener('click', async (event) => {
+      try {
+        const {data} = await axiosInstance.get('/api/users');
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+
+    })
+
+  </script>
+</body>
+</html>
