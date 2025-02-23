@@ -9,7 +9,9 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        $ci4AjaxTable = new Ci4AjaxTable();
+        $db2 = \Config\Database::connect('ci4Ajax');
+
+        $ci4AjaxTable = new Ci4AjaxTable($db2);
         $registros = $ci4AjaxTable->select('id,firstName,lastName')->paginate(10, );
 
         return view('home', ['registros' => $registros, 'pager' => $ci4AjaxTable->pager]);

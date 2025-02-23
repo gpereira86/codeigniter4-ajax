@@ -1,7 +1,7 @@
 <?php echo $this->extend('master') ?>
 
 <?php echo $this->section('content') ?>
-    <h1>Home!</h1>
+    <h1>Estamos na Aula 26 => <a href="https://www.youtube.com/watch?v=S7L_1UhvcQs&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=26">Link da Aula</a></h1>
 
     <ul>
         <?php foreach($registros as $registro): ?>
