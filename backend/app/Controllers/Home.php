@@ -7,6 +7,7 @@ use App\Models\Ci4AjaxTable;
 
 class Home extends BaseController
 {
+
     public function index(): string
     {
         $db2 = \Config\Database::connect('ci4Ajax');
@@ -16,6 +17,46 @@ class Home extends BaseController
 
         return view('home', ['registros' => $registros, 'pager' => $ci4AjaxTable->pager]);
     }
+
+
+//    public function index(): string
+//    {
+//
+//
+////        $db2 = \Config\Database::connect('ci4Ajax');
+////
+////        $ci4AjaxTable = new Ci4AjaxTable($db2);
+////        $registros = $ci4AjaxTable->select('id,firstName,lastName')->paginate(10, );
+//
+//        $db = db_connect();
+//
+//        $db->transStart();
+//
+//        $db->query("delete from user where id = ?",[50]);
+//
+//        $db->query("Insert into users (firstName, lastName, email, password) values(?,?,?,?)",[
+//            'Mari', 'Paiva', 'paiva6@gmail.com', password_hash(123, PASSWORD_DEFAULT)]);
+//
+//        $db->query("update user set email = ? where id = ?",[
+//            'pereira6@gmail.com', 49]);
+//
+//
+//        $db->transComplete();
+//
+//        die();
+//
+////        return view('home', ['registros' => $registros, 'pager' => $ci4AjaxTable->pager]);
+//    }
+
+//    public function index(): string
+//    {
+//        $db2 = \Config\Database::connect('ci4Ajax');
+//
+//        $ci4AjaxTable = new Ci4AjaxTable($db2);
+//        $registros = $ci4AjaxTable->select('id,firstName,lastName')->paginate(10, );
+//
+//        return view('home', ['registros' => $registros, 'pager' => $ci4AjaxTable->pager]);
+//    }
 
 
 //    public function index(): string
