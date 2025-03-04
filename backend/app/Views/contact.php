@@ -2,7 +2,7 @@
 
 <?php echo $this->section('content') ?>
     <h1>Contact!</h1>
-    <h2>Paramos na Aula 32 >>> <a href="https://www.youtube.com/watch?v=BzXjRd309o4&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=32"> Link para aula!</a></h2>
+    <h2>Paramos de estudar na Aula 32 >>> <a href="https://www.youtube.com/watch?v=BzXjRd309o4&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=32"> Link para aula!</a></h2>
     <br>
 
     <?php //if (session()->has('errors')): ?>
