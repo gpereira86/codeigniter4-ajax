@@ -15,10 +15,10 @@ class Contact extends BaseController
     public function store()
     {
 
-        echo "<pre>";
-        var_dump($this->request->getVar('address.street'));
-        echo "</pre>";
-        die();
+//        echo "<pre>";
+//        var_dump($this->request->getVar('address.street'));
+//        echo "</pre>";
+//        die();
 
         $rules = [
             'name' => 'required',
@@ -42,8 +42,8 @@ class Contact extends BaseController
             return redirect()->route('contact')->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        var_dump($this->request->getVar()['name']);
-        die();
+//        var_dump($this->request->getVar()['name']);
+//        die();
 
 
 
